@@ -21,8 +21,8 @@ class HTMLConverter(QWidget):
         ui_path = os.path.join(self.ROOT_DIR, 'html_converter.ui')
         loadUi(ui_path, self)
         self.browse_btn.clicked.connect(self.browse)
-        self.convert_to_html.clicked.connect(self.convert_html)
-        self.send_c_program.clicked.connect(self.send_to_c)
+        self.convert_to_html.clicked.connect(self.convert_html) #+
+        self.send_c_program.clicked.connect(self.send_to_c) #+
         self.file_path = None
 
     def browse(self):
@@ -39,8 +39,8 @@ class HTMLConverter(QWidget):
             print(file)
 
     def send_to_c(self):
-        print("C button works, unfortunately that's all that it does")
-        self.text_rezultat.setText("C button works, unfortunately that's all that it does")
+        print("C button")
+        self.text_rezultat.setText("C button")
 
     def convert_html(self):
         file = open(self.file_path, 'r')
